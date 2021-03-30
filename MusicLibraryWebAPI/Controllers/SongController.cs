@@ -12,27 +12,51 @@ namespace MusicLibraryWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MusicController : ControllerBase
+    public class SongController : ControllerBase
     {
+
+        private ApplicationDbContext _context;
+        public SongController(ApplicationDbContext context) {
+        
+            _context = context;
+        }
+
+
+        //public IEnumerable<Song> GetSongs()
+        //{
+        //    return songs;
+        //}
+
         // GET: api/<MusicController>
         [HttpGet]
-        //public IActionResult Get()
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            var songs = _context.Songs.ToList();
+            return Ok(songs);
         }
 
         // GET api/<MusicController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            var song = _context.Songs.Where(s => s.Id == 1).FirstOrDefault();
+            return Ok(song);
         }
 
         // POST api/<MusicController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] Song song)
         {
+            try
+            {
+                _context.Add(song);
+                _context.SaveChanges();
+                return Ok();
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
 
         // PUT api/<MusicController>/5
