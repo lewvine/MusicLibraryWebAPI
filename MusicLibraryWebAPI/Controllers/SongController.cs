@@ -100,10 +100,26 @@ namespace MusicLibraryWebAPI.Controllers
                 var songInDb = _context.Songs.Where(s => s.Id == id).FirstOrDefault();
                 if (songInDb != null)
                 {
-                    songInDb.Artist = song.Artist;
-                    songInDb.Album = song.Album;
-                    songInDb.ReleaseDate = song.ReleaseDate;
-                    songInDb.Title = song.Title;
+                    if(song.Artist != null)
+                    {
+                        songInDb.Artist = song.Artist;
+
+                    }
+                    if(song.Album != null)
+                    {
+                        songInDb.Album = song.Album;
+
+                    }
+                    if (song.ReleaseDate.GetType() != typeof(DateTime))
+                    {
+                        songInDb.ReleaseDate = song.ReleaseDate;
+
+                    }
+                    if(song.Title != null)
+                    {
+                        songInDb.Title = song.Title;
+
+                    }
                     _context.Update(songInDb);
                     _context.SaveChanges();
                     return StatusCode(200, songInDb);
