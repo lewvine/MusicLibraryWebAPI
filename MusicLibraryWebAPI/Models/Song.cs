@@ -14,6 +14,7 @@ namespace MusicLibraryWebAPI.Models
         public string Artist { get; set; }
         public string Album { get; set; }
         public DateTime ReleaseDate { get; set; }
+        public int Likes { get; set; }
 
     }
 

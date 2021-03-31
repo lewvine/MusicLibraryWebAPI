@@ -120,6 +120,30 @@ namespace MusicLibraryWebAPI.Controllers
             }
         }
 
+        [HttpPut("{id}/likes")]
+        public IActionResult Put(int id)
+        {
+            try
+            {
+                var song = _context.Songs.Where(s => s.Id == id).FirstOrDefault();
+                if (song != null)
+                {
+                    song.Likes++;
+                    _context.SaveChanges();
+                    return StatusCode(200, song.Likes);
+                }
+                else
+                {
+                    return StatusCode(400);
+                }
+
+            }
+            catch
+            {
+                return StatusCode(500);
+            }
+        }
+
         // DELETE api/<MusicController>/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
