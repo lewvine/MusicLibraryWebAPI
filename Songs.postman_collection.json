@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "8e810c97-4f19-42a3-a2b8-a45661df0f65",
+		"name": "Songs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "PUT Like",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44309/api/Song/1/likes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44309",
+							"path": [
+								"api",
+								"Song",
+								"1",
+								"likes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Mar 2021 16:01:33 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1"
+						}
+					],
+					"cookie": [],
+					"body": "5"
+				},
+				{
+					"name": "GET Song by Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44309/api/Song/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44309",
+							"path": [
+								"api",
+								"Song",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Mar 2021 20:33:41 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "117"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"title\": \"Snoop Doggy Doggy\",\n    \"artist\": \"Snoop Dogg\",\n    \"album\": \"One and Done\",\n    \"releaseDate\": \"1988-05-10T00:00:00\"\n}"
+				},
+				{
+					"name": "GET Songs",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44309/api/Song/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44309",
+							"path": [
+								"api",
+								"Song",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Mar 2021 20:35:09 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "617"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Paint it Black\",\n        \"artist\": \"The Rolling Stones\",\n        \"album\": \"The Rolling Stones Greatest Hits\",\n        \"releaseDate\": \"1975-05-10T00:00:00\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Back in Black\",\n        \"artist\": \"AC/DC\",\n        \"album\": \"Back in Black\",\n        \"releaseDate\": \"1990-01-01T00:00:00\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Proud to be American\",\n        \"artist\": \"Lee Greenwood\",\n        \"album\": \"Red, White, and Blue\",\n        \"releaseDate\": \"1975-05-10T00:00:00\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Snoop Doggy Doggy\",\n        \"artist\": \"Snoop Dogg\",\n        \"album\": \"One and Done\",\n        \"releaseDate\": \"1988-05-10T00:00:00\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Ice, Ice, Baby\",\n        \"artist\": \"Ice Cube\",\n        \"album\": \"One and Done\",\n        \"releaseDate\": \"1988-05-10T00:00:00\"\n    }\n]"
+				},
+				{
+					"name": "PUT Song by Id",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Let it be\",\r\n    \"artist\": \"The Rolling Stones\",\r\n    \"album\": \"The Rolling Stones Greatest Hits\",\r\n    \"releaseDate\": \"1975-05-10T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44309/api/Song/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44309",
+							"path": [
+								"api",
+								"Song",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Mar 2021 20:37:04 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "137"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"Let it be\",\n    \"artist\": \"The Rolling Stones\",\n    \"album\": \"The Rolling Stones Greatest Hits\",\n    \"releaseDate\": \"1975-05-10T00:00:00\"\n}"
+				},
+				{
+					"name": "POST Song",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Let it be\",\r\n    \"artist\": \"The Beatles\",\r\n    \"album\": \"The Beatles Greatest Hits\",\r\n    \"releaseDate\": \"1975-05-10T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44309/api/Song/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44309",
+							"path": [
+								"api",
+								"Song",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Mar 2021 20:38:21 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "123"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 6,\n    \"title\": \"Let it be\",\n    \"artist\": \"The Beatles\",\n    \"album\": \"The Beatles Greatest Hits\",\n    \"releaseDate\": \"1975-05-10T00:00:00\"\n}"
+				},
+				{
+					"name": "DELETE Song",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Let it be1\",\r\n    \"artist\": \"The Rolling Stones\",\r\n    \"album\": \"The Rolling Stones Greatest Hits\",\r\n    \"releaseDate\": \"1975-05-10T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44309/api/Song/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44309",
+							"path": [
+								"api",
+								"Song",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Mar 2021 16:16:39 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "138"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"Let it be1\",\n    \"artist\": \"The Rolling Stones\",\n    \"album\": \"The Rolling Stones Greatest Hits\",\n    \"releaseDate\": \"0001-01-01T00:00:00\"\n}"
+				}
+			]
+		}
+	]
+}
