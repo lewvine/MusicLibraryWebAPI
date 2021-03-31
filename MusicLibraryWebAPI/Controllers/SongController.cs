@@ -129,10 +129,14 @@ namespace MusicLibraryWebAPI.Controllers
                 var songToDelete = _context.Songs.Where(s => s.Id == id).FirstOrDefault();
                 if (songToDelete != null)
                 {
-                    Song copyOfSong = new Song { Id = songToDelete.Id, Album = songToDelete.Album, Title = songToDelete.Title, Artist = songToDelete.Artist };
+                    SongDto copyOfSong = new SongDto { 
+                        Id = songToDelete.Id, 
+                        Album = songToDelete.Album, 
+                        Title = songToDelete.Title, 
+                        Artist = songToDelete.Artist };
                     _context.Remove(songToDelete);
                     _context.SaveChanges();
-                    return StatusCode(200, songToDelete);
+                    return StatusCode(200, copyOfSong);
                 }
                 else
                 {
